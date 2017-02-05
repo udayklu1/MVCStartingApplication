@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    //Layout = "MyLaout.cshtml";
+}
+
+<div class="jumbotron">
+    <h1>Middle valley Community Bank</h1>
+    <p class="lead">Middle Valley Community Bank offers the first-over web-based ATM. Give it a try today.</p>
+    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h2>Register</h2>
+        <p>
+            Open an account with us
+        </p>
+        <p>@Html.ActionLink("Register", "Register", "Account", null, new { @class = "btn btn-default" })</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Log in</h2>
+        <p>Access your existring account</p>
+        <p>@Html.ActionLink("Log in", "Login", "Account", null, new { @class = "btn btn-default" })</p>
+    </div>
+ </div>
+@*
+    You are using @Request.Browser.Browser, and that's OK!, if you have any problem please contact at support@udayklu.com. Or send us a tweet on @@udaykluMVC
+
+    @{var amounts = new List<decimal> { 100, 10.23m, 434, 19.12m, -200, 340 };}
+
+    <ol>
+        @foreach (decimal amount in amounts)
+        {
+            <li>
+                @fnFormatMoney(amount);
+            </li>
+        }
+    </ol>
+
+    @helper fnFormatMoney(Decimal amount)
+    {
+        var color = "green";
+        if (amount < 100)
+        {
+            color = "red";
+        }
+        <span style="color:@color">@string.Format("{0:c}", amount)</span>
+    }
+*@

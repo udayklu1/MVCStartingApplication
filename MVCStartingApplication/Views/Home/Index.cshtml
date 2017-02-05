@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row">
+    <div class="margin-top-20 col-md-6" style="margin-top:50px;">
+        <a href="#" class="btn btn-primary btn-large btn-block"><span class="glyphicon glyphicon-arrow-down"></span> Withdrawal</a>
+        <a href="#" class="btn btn-primary btn-large btn-block"><span class="glyphicon glyphicon-flash"></span> Quich Cash $100</a>
+        <a href="@Url.Action("Details","CheckingAccount")" class="btn btn-primary btn-large btn-block"><span class="glyphicon glyphicon-question-sign"></span> Balance Enqiry</a>
+    </div>
+    <div class="margin-top-20 col-md-6" style="margin-top:50px;">
+        <a href="#" class="btn btn-primary btn-large btn-block"><span class="glyphicon glyphicon-print"></span> Statement</a>
+        <a href="#" class="btn btn-primary btn-large btn-block"><span class="glyphicon glyphicon-transfer"></span> Transfer Funds</a>
+        <a href="#" class="btn btn-primary btn-large btn-block"><span class="glyphicon glyphicon-arrow-up"></span> Deposits</a>
+    </div>
+</div>
+
+
+@*
+    You are using @Request.Browser.Browser, and that's OK!, if you have any problem please contact at support@udayklu.com. Or send us a tweet on @@udaykluMVC
+
+    @{var amounts = new List<decimal> { 100, 10.23m, 434, 19.12m, -200, 340 };}
+
+    <ol>
+        @foreach (decimal amount in amounts)
+        {
+            <li>
+                @fnFormatMoney(amount);
+            </li>
+        }
+    </ol>
+
+    @helper fnFormatMoney(Decimal amount)
+    {
+        var color = "green";
+        if (amount < 100)
+        {
+            color = "red";
+        }
+        <span style="color:@color">@string.Format("{0:c}", amount)</span>
+    }
+*@
