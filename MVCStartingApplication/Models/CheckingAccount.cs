@@ -10,10 +10,14 @@ namespace MVCStartingApplication.Models
     {
         public int Id { get; set; }
 
+        [Required]
+        [RegularExpression(@"\d{6,10}", ErrorMessage = "Account number must be between 6 to 10")]
         [Display(Name = "Account #")]
         public string AccountNumber { get; set; }
+        [Required]
         [Display(Name = "First name")]
         public String FirstName { get; set; }
+        [Required]
         [Display(Name = "Last name")]
         public string LastName { get; set; }
 
@@ -26,5 +30,9 @@ namespace MVCStartingApplication.Models
         }
         [DataType(DataType.Currency)]
         public decimal Balance { get; set; }
+
+        public virtual ApplicationUser User { get; set; }
+
+        public string ApplcationUserId { get; set; }
     }
 }
