@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -12,6 +13,8 @@ namespace MVCStartingApplication.Models
 
         [Required]
         [RegularExpression(@"\d{6,10}", ErrorMessage = "Account number must be between 6 to 10")]
+        //[StringLength(10)]
+       // [Column(TypeName="varchar")]
         [Display(Name = "Account #")]
         public string AccountNumber { get; set; }
         [Required]

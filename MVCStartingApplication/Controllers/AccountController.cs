@@ -157,7 +157,7 @@ namespace MVCStartingApplication.Controllers
                 if (result.Succeeded)
                 {
                     var db = new ApplicationDbContext();
-                    var checkingAccount = new CheckingAccount { FirstName = model.FirstName, LastName = model.LastName, AccountNumber = "000234123234", Balance = 0, ApplcationUserId = user.Id };
+                    var checkingAccount = new CheckingAccount { FirstName = model.FirstName, LastName = model.LastName, AccountNumber = "2341232340", Balance = 0, ApplcationUserId = user.Id };
                     db.CheckingAccounts.Add(checkingAccount);
                     try
                     {
